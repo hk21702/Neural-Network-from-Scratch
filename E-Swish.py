@@ -24,7 +24,7 @@ class DeepNeuralNetwork():
         self.params = self.initialization()
 
     def swish(self, x, derivative=False):
-        B = 1
+        B = 1.25
         if derivative:
             return (B*x*self.sigmoid(x)) + (self.sigmoid(x) * (B - (B*x*self.sigmoid(x))))
         return B*x*self.sigmoid(x)
