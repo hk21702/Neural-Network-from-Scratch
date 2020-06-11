@@ -25,19 +25,10 @@ class DeepNeuralNetwork():
 
     def relu(self, x, derivative=False):
         if derivative:
-            return np.greater(x, 0.01)
-        return np.maximum(0.01, x)
-
-    def swish(self, x, derivative=False):
-        B =  1.25
-        if derivative:
-            return (B*x*self.sigmoid(x)) + (self.sigmoid(x) * (B - (B*x*self.sigmoid(x))))
-        return B*x*self.sigmoid(x)
-
-    def sigmoid(self, x, derivative=False):
-      if derivative:
-           return (np.exp(-x))/((np.exp(-x)+1)**2)
-      return 1/(1 + np.exp(-x))
+            dx = np.ones_like(x)
+            dx[x < 0] = 0.01
+            return dx
+        return np.maximum(1e-2*x, x)
 
     def softmax(self, x):
         # Numerically stable with large exponentials
