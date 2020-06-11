@@ -8,7 +8,7 @@ Utilizes the MNIST database of handwritten digits: http://yann.lecun.com/exdb/mn
 
 - [x] 2 hidden layers + input and output layers
 - [x] Softmax for output layer normalization
-- [x] 4 different activation algorithms:
+- [x] 5 different activation algorithms:
   -  Swish
   -  E-Swish
   -  Relu
