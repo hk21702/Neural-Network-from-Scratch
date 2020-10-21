@@ -14,3 +14,5 @@ Utilizes the MNIST database of handwritten digits: http://yann.lecun.com/exdb/mn
   -  Relu
   -  Leaky Relu
   -  Sigmoid
+
+Based heavily on https://mlfromscratch.com/neural-network-tutorial/#/ with modifications mostly to feature other activation algorithms.
